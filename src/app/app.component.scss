@@ -1,0 +1,124 @@
+body {
+ background: #ffffff;
+}
+
+/* estilo contenedor principal*/
+.container {
+    background: white;
+    max-width: 500px;
+    margin: auto;
+    padding: 10px 20px;
+}
+
+/* estilo titulo*/
+.titulo {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* estilo input ingreso tareas nuevas*/
+.input-ingreso-tarea {
+    border: 3px solid black;
+    padding: 10px 7px;
+    font-size: 16px;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+/* estilo boton add*/
+.boton-add {
+    border: 3px solid black;
+    padding: 10px 18px;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: -35px;
+    margin-left: 4px;
+}
+
+/* estilo boton add cuando paso por encima*/
+.boton-add:hover {
+    background: rgb(192, 185, 185);
+}
+
+/* estilo boton eliminar de todos los checkbox*/
+.boton-eliminar {
+     border: none;
+     font-weight: bold;
+     display:block;
+     margin-top: - 22px;
+     margin-left: 400px;
+     padding:  2px 5px;
+     position: relative;
+     margin-right: 0;
+     background-color: #ffffff;
+     background-image: url("../assets/img/trash-can-regular.svg");
+     background-repeat: no-repeat;
+     background-position: center;
+     height: 22px;
+     width: 22px;
+}   
+
+/* contenedor checkbox*/
+.checkbox {
+    display: block;
+    position: relative;
+    padding-left: 45px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 550;
+    border: 3px solid black;
+
+  }
+
+/* escondemos el default checkbox */
+.checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+ /* creamos un custom checkbox */
+.checkmark  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: #ffffff;
+    border: 2px solid black;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+/* mostramos el marcador al seleccionar */
+  .checkbox input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  
+/* estilo del marcador */
+.checkbox .checkmark:after {
+    left: 4px;
+    top: 0px;
+    width: 3px;
+    height: 8px;
+    border: solid rgb(0, 0, 0);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+ /* tachado de tareas realizadas... PENDIENTE! */
+
+/* creamos el marcador (escondido al no seleccionar) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
