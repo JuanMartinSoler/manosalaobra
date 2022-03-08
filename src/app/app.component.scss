@@ -70,8 +70,11 @@ body {
     font-size: 22px;
     font-weight: 550;
     border: 3px solid black;
+}
 
-  }
+.checkbox:checked {
+    text-decoration: line-through;
+}
 
 /* escondemos el default checkbox */
 .checkbox input {
@@ -99,8 +102,7 @@ body {
   .checkbox input:checked ~ .checkmark:after {
     display: block;
   }
-
-  
+ 
 /* estilo del marcador */
 .checkbox .checkmark:after {
     left: 4px;
@@ -114,7 +116,10 @@ body {
     transform: rotate(45deg);
   }
 
- /* tachado de tareas realizadas... PENDIENTE! */
+ /* tachado de tareas realizadas*/
+ .checkbox input:checked ~ label {
+    text-decoration: line-through;
+}
 
 /* creamos el marcador (escondido al no seleccionar) */
 .checkmark:after {
