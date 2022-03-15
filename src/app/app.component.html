@@ -10,57 +10,16 @@
 <body>
     <div class="container">
       <div class="header">
-        <h1 class="titulo">Lista de tareas de Juanchi</h1>
+        <h1 class="titulo">Lista de tareas de {{nombre}}</h1>
       </div>
-      <input type="text" class="input-ingreso-tarea" placeholder="ingrese una tarea...">
-      <button class="boton-add">add</button>
-
+      <input type="text" id="inputtarea" class="input-ingreso-tarea" placeholder="ingrese una tarea..." value= "" #nuevatarea>
+      <button class="boton-add" (click)="creartareas(nuevatarea.value)">add</button>
       <div>
-        <label class="checkbox">
+        <label class="checkbox" *ngFor="let tarea of tareas">
           <input type="checkbox">
-          <label id="TaskN">Task N</label>
+          <label>{{tarea}}</label>
           <span class="checkmark"></span>
-          <button class="boton-eliminar"></button>
-        </label>
-      </div>
-      <div>
-        <label class="checkbox" >
-          <input type="checkbox" >
-          <label id="TaskN-1">Task N-1</label>
-          <span class="checkmark"></span>
-          <button class="boton-eliminar"></button>
-        </label>
-      </div>
-      <div>
-        <label class="checkbox"> 
-          <input type="checkbox" checked="checked">
-          <label id="TaskN-2">Completed Task N-2</label>
-          <span class="checkmark"></span>
-          <button class="boton-eliminar"></button>
-        </label>
-      </div>
-      <div>
-        <label class="checkbox">
-          <input type="checkbox">
-          <label id="TaskK">Task K</label>
-          <span class="checkmark"></span>
-          <button class="boton-eliminar"></button>
-        </label>
-      </div>
-      <div>
-        <label class="checkbox">
-          <input type="checkbox">
-          <label id="Task2">Task 2</label>
-          <span class="checkmark"></span>
-          <button class="boton-eliminar"></button>
-        </label>
-      </div>
-      <div>
-        <label class="checkbox">
-          <input type="checkbox" checked="checked">
-          <label id="Task1">Completed Task 1</label>
-          <span class="checkmark"></span>
-          <button class="boton-eliminar"></button>
+          <button class="boton-eliminar" (click)="borrartarea(tarea)"></button>
         </label>
       </div>
     </div>
