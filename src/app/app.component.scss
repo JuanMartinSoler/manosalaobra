@@ -1,77 +1,176 @@
+$Negro:rgba(34,34,34,1);
+$Negro50:rgba(34,34,34,0.5);
+$Negro10:rgba(34,34,34,0.1);
+$Blanco:rgba(255,255,255,1);
+$Blanco50:rgba(255,255,255,0.5);
+$Blanco20:rgba(255,255,255,0.2);
+
+
 body {
- background: #ffffff;
+    background: $Negro;
+    border-radius: 4px 4px 4px 4px;
+}
+
+.header {
 }
 
 /* estilo contenedor principal*/
 .container {
-    background: white;
-    max-width: 500px;
+    background: $Negro;
+    max-width: 512px;
     margin: auto;
     padding: 10px 20px;
+    border-radius: 16px 0px 0px 16px;
 }
 
 /* estilo titulo*/
 .titulo {
+    border: 2px;
+    border-color: $Blanco20;
+    
+    border-bottom: 2px solid $Blanco20;
+    color: $Blanco;
+    font-family: 'Roboto';
+    font-size: 36px; 
     text-align: center;
-    text-transform: uppercase;
+    //text-transform: uppercase;
 }
 
 /* estilo input ingreso tareas nuevas*/
 .input-ingreso-tarea {
-    border: 3px solid black;
-    padding: 10px 7px;
-    font-size: 16px;
-    width: 80%;
+    background-color: $Blanco20;
+    border: none;
+    border-radius: 4px 4px 4px 4px;
+    padding: 10px;
+    font-family: 'Roboto';
+    font-size: 24px;
+    color: $Blanco;
+    width: 95%;
+    margin: 10px 0px;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: inset 0px 0px 15px 10px $Blanco20;
 }
 
 /* estilo boton add*/
 .boton-add {
-    border: 3px solid black;
-    padding: 10px 18px;
-    font-size: 16px;
-    text-transform: uppercase;
-    margin-top: -35px;
-    margin-left: 4px;
-    cursor: pointer;
+    border: 1px solid $Blanco;
+     border-radius: 4px 4px 4px 4px;
+     font-weight: bold;
+     display:block;
+     margin: -10px 0;
+     margin-top: -60px;
+     margin-left: 470px;
+     padding:  8px 8px;
+     position: relative;
+     margin-right: 0;
+     background-color: $Negro10;
+     background-repeat: no-repeat;
+     background-position: center;
+     height: 32px;
+     width: 32px;
+     cursor: pointer;
+    //background-image: url("../assets/img/checkmark.svg");
+    //justify-content: space-between;
 }
 
-/* estilo boton add cuando paso por encima*/
+/* estilo boton add cuando paso por encima */
 .boton-add:hover {
     background: rgb(192, 185, 185);
 }
 
-/* estilo boton eliminar de todos los checkbox*/
+/* estilo boton eliminar de todos los checkbox */
 .boton-eliminar {
-     border: none;
+     border: 1px solid $Blanco;
+     border-radius: 4px 4px 4px 4px;
      font-weight: bold;
      display:block;
-     margin-top: - 22px;
-     margin-left: 400px;
+     margin-top: -2px;
+     margin-left: 426px;
      padding:  2px 5px;
      position: relative;
-     margin-right: 0;
-     background-color: #ffffff;
-     background-image: url("../assets/img/trash-can-regular.svg");
+     margin-right: 10px;
+     background-color: $Negro10;
      background-repeat: no-repeat;
      background-position: center;
-     height: 22px;
-     width: 22px;
+     height: 32px;
+     width: 32px;
      cursor: pointer;
 }   
 
+/* estilo boton compartir de todos los checkbox */
+.boton-compartir {
+     border: 1px solid $Blanco;
+     border-radius: 4px 4px 4px 4px;
+     font-weight: bold;
+     display:block;
+     margin-top: - 32px;
+     margin-left: 388px;
+     padding:  2px 5px;
+     position: relative;
+     margin-right: 0;
+     background-color: $Negro10;
+     background-repeat: no-repeat;
+     background-position: center;
+     height: 32px;
+     width: 32px;
+     cursor: pointer;
+}
+
+/* estilo boton portapapeles de todos los checkbox */
+.boton-portapapeles {
+     border: 1px solid $Blanco;
+     border-radius: 4px;
+     font-weight: bold;
+     display:flex;
+     margin-top: 0px;
+     margin-left: -580px;
+     padding:  2px 5px;
+     position: relative;
+     //margin-right: 0;
+     background-color: $Negro10;
+     background-repeat: no-repeat;
+     background-position: center;
+     height: 32px;
+     width: 32px;
+     cursor: pointer;
+}
+
+.boton-pantallacompleta {
+    border: 1px solid $Blanco;
+    border-radius: 4px;
+    font-weight: bold;
+    display:block;
+    margin-top: -60px;
+    margin-left: 480px;
+    padding:  2px 5px;
+    position: relative;
+    margin-right: 0;
+    background-color: $Negro10;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+}
+
 /* contenedor checkbox*/
 .checkbox {
-    display: block;
+    border-radius: 4px 4px 4px 4px;
+    color: $Blanco;
+    text-align: left;
+    background-color: $Blanco20;
+    display: flex;
     position: relative;
     padding-left: 45px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin: 10px 0;
+    margin-top: 32px;
+    margin-bottom: -12px;
     cursor: pointer;
     font-size: 22px;
-    font-weight: 550;
-    border: 3px solid black;
 }
 
 .checkbox:checked {
@@ -94,8 +193,8 @@ body {
     left: 0;
     height: 15px;
     width: 15px;
-    background-color: #ffffff;
-    border: 2px solid black;
+    background-color: $Blanco20;
+    border: 1px solid $Blanco;
     margin-top: 10px;
     margin-left: 10px;
 }
@@ -111,7 +210,7 @@ body {
     top: 0px;
     width: 3px;
     height: 8px;
-    border: solid rgb(0, 0, 0);
+    border: 1px solid $Blanco;
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -128,4 +227,4 @@ body {
     content: "";
     position: absolute;
     display: none;
-  }
+}
