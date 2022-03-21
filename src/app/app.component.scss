@@ -7,6 +7,7 @@ $Blanco20:rgba(255,255,255,0.2);
 
 
 body {
+    display: flex;
     background: $Negro;
     border-radius: 4px 4px 4px 4px;
 }
@@ -29,7 +30,7 @@ body {
         color: $Blanco;
         font-family: 'Roboto';
         font-size: 36px; 
-        text-align: center;
+        text-align: left;
     }
 
     .boton-pantallacompleta {
@@ -38,7 +39,7 @@ body {
         font-weight: bold;
         display:block;
         margin-top: -60px;
-        margin-left: 480px;
+        margin-left: 470px;
         padding:  2px 5px;
         position: relative;
         margin-right: 0;
@@ -110,37 +111,48 @@ body {
     font-size: 22px;
 
     .contenedorDeBotones {
-        border: 1px solid $Blanco;
-        border-radius: 4px 4px 4px 4px;
-        font-weight: bold;
-        display:flex;
-        padding:  2px 5px;
+        margin-left: 300px;
+        display: flex;
+        padding: 2px 8px;
         position: relative;
         background-color: $Negro10;
         background-position: center;
         height: 32px;
-        width: 32px;
+        width: 70px;
         cursor: pointer;
         
         :hover {
             background: $Blanco20;
         }
-   
-        .boton-eliminar {
-           margin-top: -2px;
-           margin-left: 360px;
-           margin-right: 10px;
-        }
-   
-        .boton-compartir {
-           margin-top: - 32px;
-           margin-left: -200px;
-        }
-   
+        
         .boton-portapapeles {
-           margin-top: 0px;
-           margin-left: -50px;
+            border: 1px solid $Blanco;
+            background-color: $Negro10;
+            border-radius: 4px 4px 4px 4px;
+            margin-top: -2px;
+            margin-left: -50px;
+            padding-left: 16px;
+            margin-right: -8px;
         }
+        
+        .boton-compartir {
+            border: 1px solid $Blanco;
+            background-color: $Negro10;
+            border-radius: 4px 4px 4px 4px;
+            margin-top: -2px;
+            margin-left: -50px;
+            margin-right: -8px;
+        }
+        
+        .boton-eliminar {
+            border: 1px solid $Blanco;
+            background-color: $Negro10;
+            border-radius: 4px 4px 4px 4px;
+            margin-top: -2px;
+            margin-left: 16px;
+            margin-right: -8px;
+        }
+       
    }
 }
 
