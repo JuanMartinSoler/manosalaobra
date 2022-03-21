@@ -11,10 +11,7 @@ body {
     border-radius: 4px 4px 4px 4px;
 }
 
-.header {
-}
-
-/* estilo contenedor principal*/
+/* estilo contenedor principal */
 .container {
     background: $Negro;
     max-width: 512px;
@@ -23,20 +20,37 @@ body {
     border-radius: 16px 0px 0px 16px;
 }
 
-/* estilo titulo*/
-.titulo {
-    border: 2px;
-    border-color: $Blanco20;
-    
-    border-bottom: 2px solid $Blanco20;
-    color: $Blanco;
-    font-family: 'Roboto';
-    font-size: 36px; 
-    text-align: center;
-    //text-transform: uppercase;
+/* estilo header */
+.header {
+    .titulo {
+        border: 2px;
+        border-color: $Blanco20;
+        border-bottom: 2px solid $Blanco20;
+        color: $Blanco;
+        font-family: 'Roboto';
+        font-size: 36px; 
+        text-align: center;
+    }
+
+    .boton-pantallacompleta {
+        border: 1px solid $Blanco;
+        border-radius: 4px;
+        font-weight: bold;
+        display:block;
+        margin-top: -60px;
+        margin-left: 480px;
+        padding:  2px 5px;
+        position: relative;
+        margin-right: 0;
+        background-color: $Negro10;
+        background-position: center;
+        height: 32px;
+        width: 32px;
+        cursor: pointer;
+    }
 }
 
-/* estilo input ingreso tareas nuevas*/
+/* estilo input ingreso tareas nuevas */
 .input-ingreso-tarea {
     background-color: $Blanco20;
     border: none;
@@ -53,7 +67,7 @@ body {
     box-shadow: inset 0px 0px 15px 10px $Blanco20;
 }
 
-/* estilo boton add*/
+/* estilo boton add */
 .boton-add {
     border: 1px solid $Blanco;
      border-radius: 4px 4px 4px 4px;
@@ -71,91 +85,14 @@ body {
      height: 32px;
      width: 32px;
      cursor: pointer;
-    //background-image: url("../assets/img/checkmark.svg");
-    //justify-content: space-between;
 }
 
 /* estilo boton add cuando paso por encima */
 .boton-add:hover {
-    background: rgb(192, 185, 185);
+    background: $Blanco20;
 }
 
-/* estilo boton eliminar de todos los checkbox */
-.boton-eliminar {
-     border: 1px solid $Blanco;
-     border-radius: 4px 4px 4px 4px;
-     font-weight: bold;
-     display:block;
-     margin-top: -2px;
-     margin-left: 426px;
-     padding:  2px 5px;
-     position: relative;
-     margin-right: 10px;
-     background-color: $Negro10;
-     background-repeat: no-repeat;
-     background-position: center;
-     height: 32px;
-     width: 32px;
-     cursor: pointer;
-}   
-
-/* estilo boton compartir de todos los checkbox */
-.boton-compartir {
-     border: 1px solid $Blanco;
-     border-radius: 4px 4px 4px 4px;
-     font-weight: bold;
-     display:block;
-     margin-top: - 32px;
-     margin-left: 388px;
-     padding:  2px 5px;
-     position: relative;
-     margin-right: 0;
-     background-color: $Negro10;
-     background-repeat: no-repeat;
-     background-position: center;
-     height: 32px;
-     width: 32px;
-     cursor: pointer;
-}
-
-/* estilo boton portapapeles de todos los checkbox */
-.boton-portapapeles {
-     border: 1px solid $Blanco;
-     border-radius: 4px;
-     font-weight: bold;
-     display:flex;
-     margin-top: 0px;
-     margin-left: -580px;
-     padding:  2px 5px;
-     position: relative;
-     //margin-right: 0;
-     background-color: $Negro10;
-     background-repeat: no-repeat;
-     background-position: center;
-     height: 32px;
-     width: 32px;
-     cursor: pointer;
-}
-
-.boton-pantallacompleta {
-    border: 1px solid $Blanco;
-    border-radius: 4px;
-    font-weight: bold;
-    display:block;
-    margin-top: -60px;
-    margin-left: 480px;
-    padding:  2px 5px;
-    position: relative;
-    margin-right: 0;
-    background-color: $Negro10;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 32px;
-    width: 32px;
-    cursor: pointer;
-}
-
-/* contenedor checkbox*/
+/* contenedor checkbox */
 .checkbox {
     border-radius: 4px 4px 4px 4px;
     color: $Blanco;
@@ -171,6 +108,40 @@ body {
     margin-bottom: -12px;
     cursor: pointer;
     font-size: 22px;
+
+    .contenedorDeBotones {
+        border: 1px solid $Blanco;
+        border-radius: 4px 4px 4px 4px;
+        font-weight: bold;
+        display:flex;
+        padding:  2px 5px;
+        position: relative;
+        background-color: $Negro10;
+        background-position: center;
+        height: 32px;
+        width: 32px;
+        cursor: pointer;
+        
+        :hover {
+            background: $Blanco20;
+        }
+   
+        .boton-eliminar {
+           margin-top: -2px;
+           margin-left: 360px;
+           margin-right: 10px;
+        }
+   
+        .boton-compartir {
+           margin-top: - 32px;
+           margin-left: -200px;
+        }
+   
+        .boton-portapapeles {
+           margin-top: 0px;
+           margin-left: -50px;
+        }
+   }
 }
 
 .checkbox:checked {
@@ -200,9 +171,9 @@ body {
 }
 
 /* mostramos el marcador al seleccionar */
-  .checkbox input:checked ~ .checkmark:after {
-    display: block;
-  }
+.checkbox input:checked ~ .checkmark:after {
+    display: flex;  
+}
  
 /* estilo del marcador */
 .checkbox .checkmark:after {
@@ -215,9 +186,9 @@ body {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-  }
+}
 
- /* tachado de tareas realizadas*/
+ /* tachado de tareas realizadas */
  .checkbox input:checked ~ label {
     text-decoration: line-through;
 }
