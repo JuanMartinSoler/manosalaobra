@@ -24,6 +24,7 @@ body {
 /* estilo header */
 .header {
     .titulo {
+        display: flexbox;
         border: 2px;
         border-color: $Blanco20;
         border-bottom: 2px solid $Blanco20;
@@ -31,22 +32,24 @@ body {
         font-family: 'Roboto';
         font-size: 36px; 
         text-align: left;
+        margin-top: 0px;
+        margin-left: 0px;
     }
 
     .boton-pantallacompleta {
         border: 1px solid $Blanco;
         border-radius: 4px;
         font-weight: bold;
-        display:block;
-        margin-top: -60px;
-        margin-left: 470px;
-        padding:  2px 5px;
+        display:flex;
+        margin-top: -54px;
+        margin-bottom: 10px;
+        margin-left: 480px;
+        padding:  5px 5px;
         position: relative;
-        margin-right: 0;
         background-color: $Negro10;
         background-position: center;
-        height: 32px;
-        width: 32px;
+        height: 24px;
+        width: 24px;
         cursor: pointer;
     }
 }
@@ -56,14 +59,15 @@ body {
     background-color: $Blanco20;
     border: none;
     border-radius: 4px 4px 4px 4px;
-    padding: 10px;
+    padding: 8px;
     font-family: 'Roboto';
     font-size: 24px;
     color: $Blanco;
-    width: 95%;
+    width: 97%;
     margin: 10px 0px;
+    margin-top: 20px;
     margin-bottom: 20px;
-    display: flex;
+    display: flexbox;
     justify-content: space-between;
     box-shadow: inset 0px 0px 15px 10px $Blanco20;
 }
@@ -74,17 +78,17 @@ body {
      border-radius: 4px 4px 4px 4px;
      font-weight: bold;
      display:block;
-     margin: -10px 0;
-     margin-top: -60px;
-     margin-left: 470px;
-     padding:  8px 8px;
+     margin: 0px 0;
+     margin-top: -55px;
+     margin-left: 475px;
+     padding:  -8px 8px;
      position: relative;
      margin-right: 0;
      background-color: $Negro10;
      background-repeat: no-repeat;
      background-position: center;
-     height: 32px;
-     width: 32px;
+     height: 24px;
+     width: 24px;
      cursor: pointer;
 }
 
@@ -98,26 +102,28 @@ body {
     border-radius: 4px 4px 4px 4px;
     color: $Blanco;
     text-align: left;
+    white-space: nowrap;
     background-color: $Blanco20;
-    display: flex;
+    display: flexbox;
     position: relative;
     padding-left: 45px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 12px;
+    padding-bottom: 0px;
     margin: 10px 0;
-    margin-top: 32px;
+    margin-top: 24px;
     margin-bottom: -12px;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 20px;
 
     .contenedorDeBotones {
-        margin-left: 300px;
+        margin-left: 350px;
+        margin-top: -32px;
         display: flex;
-        padding: 2px 8px;
+        padding: 8px 16px;
         position: relative;
-        background-color: $Negro10;
+        background-color: none;
         background-position: center;
-        height: 32px;
+        height: 28px;
         width: 70px;
         cursor: pointer;
         
@@ -131,8 +137,7 @@ body {
             border-radius: 4px 4px 4px 4px;
             margin-top: -2px;
             margin-left: -50px;
-            padding-left: 16px;
-            margin-right: -8px;
+            padding-left: -8px;
         }
         
         .boton-compartir {
@@ -149,7 +154,7 @@ body {
             background-color: $Negro10;
             border-radius: 4px 4px 4px 4px;
             margin-top: -2px;
-            margin-left: 16px;
+            margin-left: 62px;
             margin-right: -8px;
         }
        
@@ -174,11 +179,11 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    height: 15px;
-    width: 15px;
+    height: 20px;
+    width: 20px;
     background-color: $Blanco20;
     border: 1px solid $Blanco;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-left: 10px;
 }
 
