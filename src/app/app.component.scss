@@ -5,6 +5,94 @@ $Blanco:rgba(255,255,255,1);
 $Blanco50:rgba(255,255,255,0.5);
 $Blanco20:rgba(255,255,255,0.2);
 
+.container {
+    background: black;
+    max-width: 32rem;
+}
+
+header.main-header{
+    background-color: cyan;
+    
+}
+
+form.form{
+    background-color: orange;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    position: sticky;
+    top: 1rem;
+
+    input {
+        height: 2rem;
+        flex-grow: 1;
+        margin-right: 0.5rem;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+    }
+    button {
+
+    }
+}
+
+ol.tasks {
+    background-color: pink;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    //display: flex;
+    //flex-direction: column;
+
+    li {
+        background-color: yellow;
+        margin-bottom: 0.5rem;
+        padding: 1rem;
+        border-radius: 0.5rem;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .task-content{
+            background-color: green;
+            display: flex;
+            align-items: center;
+            margin-right: 1rem;
+            flex-grow: 1;
+            input[type="checkbox"] {
+                margin-right: 1rem;
+            }
+            div {
+                background-color: red;
+            }
+
+        }
+        .task-buttons {
+
+            //width: 10rem;
+            //justify-content: space-between;
+            display: flex;
+            align-items: center;
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+    }
+}
+
+// old ///////////////////////////////
+$Negro:rgba(34,34,34,1);
+$Negro50:rgba(34,34,34,0.5);
+$Negro10:rgba(34,34,34,0.1);
+$Blanco:rgba(255,255,255,1);
+$Blanco50:rgba(255,255,255,0.5);
+$Blanco20:rgba(255,255,255,0.2);
+
 
 body {
     display: flex;
