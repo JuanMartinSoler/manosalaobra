@@ -16,85 +16,77 @@ body {
 .container {
     background: $Negro;
     max-width: 512px;
-    margin: auto;
     padding: 10px 20px;
     border-radius: 16px 0px 0px 16px;
 }
 
 /* estilo header */
 .header {
+    max-width: 960px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
     .titulo {
-        display: flexbox;
         border: 2px;
         border-color: $Blanco20;
         border-bottom: 2px solid $Blanco20;
         color: $Blanco;
         font-family: 'Roboto';
-        font-size: 36px; 
-        text-align: left;
-        margin-top: 0px;
-        margin-left: 0px;
+        font-size: 36px;
     }
 
     .boton-pantallacompleta {
         border: 1px solid $Blanco;
         border-radius: 4px;
-        font-weight: bold;
-        display:flex;
-        margin-top: -54px;
-        margin-bottom: 10px;
-        margin-left: 480px;
-        padding:  5px 5px;
-        position: relative;
+        box-sizing: border-box;
+        padding:  8px 8px 8px 8px;
         background-color: $Negro10;
-        background-position: center;
-        height: 24px;
-        width: 24px;
+        height: 48px;
+        width: 48px;
         cursor: pointer;
+
+        &:hover {
+            background: $Blanco20;
+        }
     }
 }
 
 /* estilo input ingreso tareas nuevas */
 .input-ingreso-tarea {
+    display: flex;
     background-color: $Blanco20;
+    color: $Blanco;
+    font-family: 'Roboto';
+    font-size: 24px;
     border: none;
     border-radius: 4px 4px 4px 4px;
     padding: 8px;
-    font-family: 'Roboto';
-    font-size: 24px;
-    color: $Blanco;
-    width: 97%;
+    width: 100%;
+    height: 64px;
     margin: 10px 0px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: flexbox;
-    justify-content: space-between;
+    box-sizing: border-box;
     box-shadow: inset 0px 0px 15px 10px $Blanco20;
 }
 
 /* estilo boton add */
 .boton-add {
-    border: 1px solid $Blanco;
+     border: 1px solid $Blanco;
      border-radius: 4px 4px 4px 4px;
-     font-weight: bold;
-     display:block;
-     margin: 0px 0;
-     margin-top: -55px;
-     margin-left: 475px;
-     padding:  -8px 8px;
-     position: relative;
-     margin-right: 0;
+     box-sizing: border-box;
+     padding: 8px 8px 8px 8px; 
+     position: absolute;
      background-color: $Negro10;
-     background-repeat: no-repeat;
-     background-position: center;
-     height: 24px;
-     width: 24px;
+     width: 48px;
+     height: 48px;
      cursor: pointer;
-}
 
-/* estilo boton add cuando paso por encima */
-.boton-add:hover {
-    background: $Blanco20;
+     &:hover {
+         background: $Blanco20;
+     }
 }
 
 /* contenedor checkbox */
@@ -102,18 +94,14 @@ body {
     border-radius: 4px 4px 4px 4px;
     color: $Blanco;
     text-align: left;
-    white-space: nowrap;
     background-color: $Blanco20;
-    display: flexbox;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: space-between;
+    display: flex;
+    padding: 8px 8px 8px 8px;
     position: relative;
-    padding-left: 45px;
-    padding-top: 12px;
-    padding-bottom: 0px;
     margin: 10px 0;
-    margin-top: 24px;
-    margin-bottom: -12px;
-    cursor: pointer;
-    font-size: 20px;
 
     .contenedorDeBotones {
         margin-left: 350px;
@@ -123,21 +111,21 @@ body {
         position: relative;
         background-color: none;
         background-position: center;
-        height: 28px;
-        width: 70px;
-        cursor: pointer;
-        
-        :hover {
-            background: $Blanco20;
-        }
         
         .boton-portapapeles {
             border: 1px solid $Blanco;
             background-color: $Negro10;
             border-radius: 4px 4px 4px 4px;
             margin-top: -2px;
-            margin-left: -50px;
+            margin-left: -60px;
             padding-left: -8px;
+            height: 32px;
+            width: 32px;
+            cursor: pointer;
+            
+            &:hover {
+                background: $Blanco20;
+            }
         }
         
         .boton-compartir {
@@ -145,8 +133,15 @@ body {
             background-color: $Negro10;
             border-radius: 4px 4px 4px 4px;
             margin-top: -2px;
-            margin-left: -50px;
+            margin-left: -60px;
             margin-right: -8px;
+            height: 32px;
+            width: 32px;
+            cursor: pointer;
+            
+            &:hover {
+                background: $Blanco20;
+            }
         }
         
         .boton-eliminar {
@@ -154,11 +149,30 @@ body {
             background-color: $Negro10;
             border-radius: 4px 4px 4px 4px;
             margin-top: -2px;
-            margin-left: 62px;
+            margin-left: 58px;
             margin-right: -8px;
+            height: 32px;
+            width: 32px;
+            cursor: pointer;
+            
+            &:hover {
+                background: $Blanco20;
+            }
         }
-       
    }
+}
+
+/* creamos un custom checkbox */
+.checkmark  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    background-color: $Blanco20;
+    border: 2px solid $Blanco;
+    margin-top: 4px;
+    margin-left: 4px;
 }
 
 .checkbox:checked {
@@ -174,19 +188,6 @@ body {
     width: 0;
 }
 
- /* creamos un custom checkbox */
-.checkmark  {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 20px;
-    width: 20px;
-    background-color: $Blanco20;
-    border: 1px solid $Blanco;
-    margin-top: 15px;
-    margin-left: 10px;
-}
-
 /* mostramos el marcador al seleccionar */
 .checkbox input:checked ~ .checkmark:after {
     display: flex;  
@@ -194,10 +195,10 @@ body {
  
 /* estilo del marcador */
 .checkbox .checkmark:after {
-    left: 4px;
-    top: 0px;
-    width: 3px;
-    height: 8px;
+    left: 7px;
+    top: 1.5px;
+    width: 6px;
+    height: 14px;
     border: 1px solid $Blanco;
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);
@@ -206,7 +207,7 @@ body {
 }
 
  /* tachado de tareas realizadas */
- .checkbox input:checked ~ label {
+ .checkbox input:checked ~ .completed {
     text-decoration: line-through;
 }
 
